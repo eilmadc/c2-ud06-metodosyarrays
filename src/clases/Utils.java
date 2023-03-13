@@ -18,22 +18,33 @@ public class Utils {
 
 	// Pedir String por dialog
 	public String pideString(String mensaje, String titulo) {
-		String string = JOptionPane.showInputDialog(null, mensaje, titulo, JOptionPane.QUESTION_MESSAGE);
+		String string = "";
+		try {
+			string = JOptionPane.showInputDialog(null, mensaje, titulo, JOptionPane.QUESTION_MESSAGE);
+		} catch (Exception e) {
+			System.out.println("No has introducido valor");
+		}
 		return string;
 	}
 
 	// Pedir Integer por dialog
 	public int pideInt(String mensaje, String titulo) {
-		int num = Integer.parseInt(JOptionPane.showInputDialog(null, mensaje, titulo, JOptionPane.QUESTION_MESSAGE));
-		return num;
+		int num = 0;
+		try {
+			num = Integer.parseInt(JOptionPane.showInputDialog(null, mensaje, titulo, JOptionPane.QUESTION_MESSAGE));
+		} catch (Exception e) {
+			System.out.println("No has introducido valor");
+		} finally {
+			return num;
+		}
 	}
 
 	// Pedir Double por dialog
 
 	public double pideDouble(String mensaje, String titulo) {
-		double num = 0;
+		double num = 0.0;
 		try {
-			Double.parseDouble(JOptionPane.showInputDialog(null, mensaje, titulo, JOptionPane.QUESTION_MESSAGE));
+			num = Double.parseDouble(JOptionPane.showInputDialog(null, mensaje, titulo, JOptionPane.QUESTION_MESSAGE));
 		} catch (Exception e) {
 			System.out.println("No has introducido valor");
 		} finally {
