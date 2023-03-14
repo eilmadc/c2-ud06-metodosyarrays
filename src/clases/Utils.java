@@ -28,6 +28,7 @@ public class Utils {
 	}
 
 	// Pedir Integer por dialog
+	@SuppressWarnings("finally")
 	public int pideInt(String mensaje, String titulo) {
 		int num = 0;
 		try {
@@ -41,6 +42,7 @@ public class Utils {
 
 	// Pedir Double por dialog
 
+	@SuppressWarnings("finally")
 	public double pideDouble(String mensaje, String titulo) {
 		double num = 0.0;
 		try {

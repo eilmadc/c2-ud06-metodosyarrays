@@ -1,9 +1,7 @@
 /**
- * 
+ * C2-UD06-Ejercicio1
  */
 package clases;
-
-import javax.swing.JOptionPane;
 
 /**
  * @author elena-01
@@ -78,7 +76,6 @@ public class Ejercicio1 {
 	private void calculaAreaCuadrado() {
 
 		String mensaje = "Introduce LADO : ";
-		String mensajeError = "No has introducido dato";
 		Double lado;
 
 		lado = utils.pideDouble(mensaje, TITULO);
