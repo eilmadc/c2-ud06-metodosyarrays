@@ -4,6 +4,7 @@ import clases.Ejercicio2;
 import clases.Ejercicio3;
 import clases.Ejercicio4;
 import clases.Ejercicio5;
+import clases.Ejercicio6;
 
 /**
  * C2-UD06-Clase principal
@@ -49,6 +50,11 @@ public class metodosyarrays {
 		System.out.println("\n************** Ejercicio 5 *************\n");
 		Ejercicio5 ejercicio5 = new Ejercicio5();
 		ejercicio5.pideNumero();
+		
+		// C2-T06: Ejercicio 5
+		System.out.println("\n************** Ejercicio 6 *************\n");
+		Ejercicio6 ejercicio6 = new Ejercicio6();
+		ejercicio6.pideNumero();
 	}
 
 }

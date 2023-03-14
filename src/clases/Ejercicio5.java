@@ -8,7 +8,7 @@ package clases;
  *
  */
 public class Ejercicio5 {
-	private static final String TITULO = "Ejercicio 5";
+	private static final String TITULO = "Ejercicio 5: Pasar de decimal a Binario";
 	Utils utils = new Utils();
 
 	// PEDIR NUMERO AL USUARIO

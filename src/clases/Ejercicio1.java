@@ -9,7 +9,7 @@ package clases;
  */
 public class Ejercicio1 {
 
-	private static final String TITULO = "Ejercicio 1";
+	private static final String TITULO = "Ejercicio 1: Calcula Area figura geométrica";
 	Utils utils = new Utils();
 
 	// PEDIR FORMA GEOMETRICA AL USUARIO

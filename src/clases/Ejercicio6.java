@@ -1,5 +1,5 @@
 /**
- * C2-UD06-Ejercicio 4
+ * C2-UD06-Ejercicio 6
  */
 package clases;
 
@@ -7,15 +7,16 @@ package clases;
  * @author elena-01
  *
  */
-public class Ejercicio4 {
-	private static final String TITULO = "Ejercicio 4: Calcula Factorial";
+public class Ejercicio6 {
+	private static final String TITULO = "Ejercicio 6: Calcula Numero de Cifras";
 	Utils utils = new Utils();
-	
+
 	// PEDIR NUMERO AL USUARIO
 	public void pideNumero() {
 
 		String mensaje = "· Introduce número";
 		int num;
+		int numCifras;
 
 		// Pide Numero
 		num = utils.pideInt(mensaje, TITULO);
@@ -24,19 +25,20 @@ public class Ejercicio4 {
 			System.out.println("No has introducido número");
 		} else {
 			System.out.println("NUMERO = " + num);
-			calculaFactorial(num);
+			numCifras = cuentaCifras(num);
+			System.out.println("NUMERO de CIFRAS = " +numCifras);
 		}
 	}
-	
-	public void calculaFactorial(int num) {
-		
-		double factorial=num;
-		
-		for (int i = (num-1); i>0; i--) {
-			factorial=factorial*i;
-			System.out.println(i);
+
+	public int cuentaCifras(int num) {
+		int numCifras = 0;
+
+		while (num != 0) {
+			num = num / 10;
+			numCifras++;
 		}
-		
-		System.out.println("· FACTORIAL = "+ factorial);
+
+		return numCifras;
 	}
+
 }

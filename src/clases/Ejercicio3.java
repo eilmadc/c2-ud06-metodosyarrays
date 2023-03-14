@@ -8,7 +8,7 @@ package clases;
  *
  */
 public class Ejercicio3 {
-	private static final String TITULO = "Ejercicio 3";
+	private static final String TITULO = "Ejercicio 3: ¿Es numero Primo?";
 	Utils utils = new Utils();
 
 	// PEDIR NUMERO AL USUARIO

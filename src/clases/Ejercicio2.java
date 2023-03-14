@@ -8,7 +8,7 @@ package clases;
  *
  */
 public class Ejercicio2 {
-	private static final String TITULO = "Ejercicio 2";
+	private static final String TITULO = "Ejercicio 2: Numeros aleatorios";
 	Utils utils = new Utils();
 
 	// Pedir cantidad, rango de numeros.
