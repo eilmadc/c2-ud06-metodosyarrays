@@ -1,6 +1,7 @@
 import clases.Ejercicio1;
 import clases.Ejercicio10;
 import clases.Ejercicio11;
+import clases.Ejercicio12;
 //import clases.Ejercicio2;
 import clases.Ejercicio2;
 import clases.Ejercicio3;
@@ -82,9 +83,14 @@ public class metodosyarrays {
 		ejercicio10.pideSizeArray();
 		
 		// C2-T06: Ejercicio 11 - Sin dialog
-		System.out.println("\n************** Ejercicio 10 *************\n");
+		System.out.println("\n************** Ejercicio 11 *************\n");
 		Ejercicio11 ejercicio11 = new Ejercicio11();
 		ejercicio11.iniciaArray();
+		
+		// C2-T06: Ejercicio 12 - Sin dialog
+		System.out.println("\n************** Ejercicio 12 *************\n");
+		Ejercicio12 ejercicio12 = new Ejercicio12();
+		ejercicio12.iniciaArray();
 	}
 
 	
