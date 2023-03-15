@@ -30,40 +30,16 @@ public class Ejercicio5 {
 
 	// GENERAR BINARIO DESDE NUMERO
 	public void generaBinario(int num) {
-		int numBinario[] = new int[12];
+		String numBinario = "";
 
-		rellenaArray(num, numBinario);
-		imprimirArray(numBinario);
-
-	}
-
-	public int[] rellenaArray(int num, int numBinario[]) {
-		int cociente = 0;
-
-		for (int i = 0; i <= numBinario.length; i++) {
-			cociente = num / 2;
-			
-			if (cociente > 1) {
-
-				numBinario[i] = num % 2; // resto
-				// cociente
-
-				num /= 2; // reducimos num por 2
-
-			} else if (cociente == 1) {
-				numBinario[i + 1] = 1;
-			}  
-			System.out.print(num + " - ");
-			System.out.print(cociente + " - ");
-			System.out.println(numBinario[i]);
+		while (num > 0) {
+			int a = num % 2;
+			numBinario = a + numBinario;
+			num = num / 2;
 		}
 
-		return numBinario;
+		System.out.println(numBinario);
+
 	}
 
-	public void imprimirArray(int binario[]) {
-		for (int i = 0; i < binario.length; i++) {
-			System.out.println(binario[i]);
-		}
-	}
 }

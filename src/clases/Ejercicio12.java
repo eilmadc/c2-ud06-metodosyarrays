@@ -17,11 +17,18 @@ public class Ejercicio12 {
 
 	// 1 Funcion inicial
 	public void iniciaArray() {
-		int size = pideSizeArray();
-		rellenaArray(size);
-		int digitoFinal = pideDigitoFinal();
-		muestraArrayCompleto(num);
-		muestraArrayDigito(num);
+		int size = pideSizeArray();// Pido tamaño del array al usuario
+		rellenaArray(size);// Relleno array con numeros aleatorios entre 1 y 300
+		int digitoFinal = pideDigitoFinal();// Pido digito final
+		muestraArrayCompleto(num);//
+		int x[] = rellenaArrayDigito(num, digitoFinal);
+		if (x.length > 0) {
+			muestraArrayCompleto(x);
+		}else {
+			System.out.println("\nNo hay coincidencias");
+		}
+		
+		
 	}
 
 	// 2 Pide tamaño de los array
@@ -41,7 +48,7 @@ public class Ejercicio12 {
 
 		// Recorre array y rellena
 		for (int i = 0; i < num.length; i++) {
-			num[i] = (int) Math.random() * (max - min) + min;
+			num[i] = (int) (Math.random() * (max - min) + min);
 		}
 	}
 
@@ -54,36 +61,48 @@ public class Ejercicio12 {
 			System.out.print(" " + numArray[i]);
 		}
 	}
-	
-	// Muestra Array
-	private void muestraArrayDigito(int[] numArray) {
-		
+
+	/* Obtengo los valores con el digito al final, lo añado a un segundo array 
+	 * que relleno con 0, adicionalmente obtengo el numero de coincidencias 
+	 * que sera la longitud que le asigno a array que sera devuelto con los valores que acaban en el digito.
+	 */
+	private int[] rellenaArrayDigito(int[] numArray, int digitoFinal) {
+
 		System.out.println("\nVALORES DEL ARRAY : ");
-		int arrayDigito[] = null;
-		
+		int arrayDigito[] = new int[numArray.length];
+
 		int x = 0;
-				
+
 		for (int i = 0; i < numArray.length; i++) {
+
 			System.out.print(" " + numArray[i]);
-			if(numArray[i] == pideDigitoFinal()) {
-				arrayDigito[x] = numArray[i] % 10;
-				System.out.println(numArray[i]);
+
+			if (digitoFinal == numArray[i] % 10) {
+				System.out.println();
+				arrayDigito[x] = numArray[i];
+				x++;
 			}
 		}
-	}
 
+		int arrayReturn[] = new int[x];
+		int j = 0;
+		while (arrayDigito[j] > 0) {
+			arrayReturn[j] = arrayDigito[j];
+			j++;
+		}
+		return arrayReturn;
+	}
 
 	// 4 Pide digito final
 	private int pideDigitoFinal() {
-		
+
 		int digito;
 
 		System.out.println("· Introduce el digito final (0-9): ");
-		
 		String sc = scanner.next();
 		digito = Integer.parseInt(sc);
-		
-		switch(digito) {
+
+		switch (digito) {
 		case 0:
 		case 1:
 		case 2:
@@ -103,14 +122,4 @@ public class Ejercicio12 {
 		return digito;
 	}
 
-	/*
-	 * // 5 TODO: Rellena segundo array private void rellenaArray2(int digitoFinal,
-	 * int[] numArray) {
-	 * 
-	 * int ultimoDigito; int nuevoArray[];
-	 * 
-	 * for (int i = 0; i < numArray.length; i++) { ultimoDigito = numArray[i] % 10;
-	 * if (digitoFinal == ultimoDigito) { nuevoArray[i]=numArray[i]; }
-	 * System.out.print(" " + numArray[i]); } }
-	 */
 }

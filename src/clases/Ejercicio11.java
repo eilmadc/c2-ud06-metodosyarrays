@@ -35,14 +35,26 @@ public class Ejercicio11 {
 		// Variables
 		Random random = new Random();
 		num1 = new int[size1];
-		num2 = new int[size1];
+		//num2 = new int[size1];
 
 		// Recorrer arrays
 		for (int i = 0; i < num1.length; i++) {
 			num1[i] = random.nextInt();
-			num2[i] = num1[i];
 		}
+		
+		//muestra array1 
+		muestraArray(num1,1);
+		
+		//Asigno array 1 a array 2
+		num2=num1;
+
+		//relleno array2
+		for (int i = 0; i < num2.length; i++) {
+			num2[i] = random.nextInt();
+		}
+		
 		multiplicaArrays(num1, num2);
+
 
 	}
 
@@ -56,13 +68,13 @@ public class Ejercicio11 {
 			num3[i] = num2[i] * num1[i];
 		}
 		
-		muestraArray(num1);
-		muestraArray(num2);
-		muestraArray(num3);
+		muestraArray(num1,1);
+		muestraArray(num2,2);
+		muestraArray(num3,3);
 	}
 
-	private void muestraArray(int[] numArray) {
-		System.out.println("\nVALORES DEL ARRAY : ");
+	private void muestraArray(int[] numArray, int numero) {
+		System.out.println("\nVALORES DEL ARRAY "+numero+": ");
 		for (int i = 0; i < numArray.length; i++) {
 			System.out.print(" " + numArray[i]);
 		}

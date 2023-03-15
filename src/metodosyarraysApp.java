@@ -26,7 +26,6 @@ public class metodosyarraysApp {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
 		/*
 		 * System.out.println("\n****************************************");
@@ -72,17 +71,17 @@ public class metodosyarraysApp {
 		 * // C2-T06: Ejercicio 10 - Sin dialog
 		 * System.out.println("\n************** Ejercicio 10 *************\n");
 		 * Ejercicio10 ejercicio10 = new Ejercicio10(); ejercicio10.pideSizeArray();
-		 * 
-		 * // C2-T06: Ejercicio 11 - Sin dialog
-		 * System.out.println("\n************** Ejercicio 11 *************\n");
-		 * Ejercicio11 ejercicio11 = new Ejercicio11(); ejercicio11.iniciaArray();
 		 */
-		
+
+		// C2-T06: Ejercicio 11 - Sin dialog
+		System.out.println("\n************** Ejercicio 11 *************\n");
+		Ejercicio11 ejercicio11 = new Ejercicio11();
+		ejercicio11.iniciaArray();
+
 		// C2-T06: Ejercicio 12 - Sin dialog
 		System.out.println("\n************** Ejercicio 12 *************\n");
 		Ejercicio12 ejercicio12 = new Ejercicio12();
 		ejercicio12.iniciaArray();
 	}
 
-	
 }
