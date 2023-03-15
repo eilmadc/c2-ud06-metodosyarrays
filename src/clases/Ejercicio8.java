@@ -14,7 +14,7 @@ public class Ejercicio8 {
 	int num[] = new int[10];
 
 	public void pideNumeros() {
-		System.out.println("Introduce números del 1 al 10: ");
+		System.out.print("Introduce números del 1 al 10: ");
 
 		for (int i = 0; i < num.length; i++) {
 			num[i] = scanner.nextInt();

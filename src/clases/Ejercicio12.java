@@ -20,8 +20,8 @@ public class Ejercicio12 {
 		int size = pideSizeArray();
 		rellenaArray(size);
 		int digitoFinal = pideDigitoFinal();
-		rellenaArray2(digitoFinal, num);
-		muestraArray();
+		muestraArrayCompleto(num);
+		muestraArrayDigito(num);
 	}
 
 	// 2 Pide tamaño de los array
@@ -46,7 +46,7 @@ public class Ejercicio12 {
 	}
 
 	// Muestra Array
-	private void muestraArray(int[] numArray) {
+	private void muestraArrayCompleto(int[] numArray) {
 
 		System.out.println("\nVALORES DEL ARRAY : ");
 
@@ -54,30 +54,63 @@ public class Ejercicio12 {
 			System.out.print(" " + numArray[i]);
 		}
 	}
+	
+	// Muestra Array
+	private void muestraArrayDigito(int[] numArray) {
+		
+		System.out.println("\nVALORES DEL ARRAY : ");
+		int arrayDigito[] = null;
+		
+		int x = 0;
+				
+		for (int i = 0; i < numArray.length; i++) {
+			System.out.print(" " + numArray[i]);
+			if(numArray[i] == pideDigitoFinal()) {
+				arrayDigito[x] = numArray[i] % 10;
+				System.out.println(numArray[i]);
+			}
+		}
+	}
+
 
 	// 4 Pide digito final
 	private int pideDigitoFinal() {
-
+		
 		int digito;
 
-		System.out.println("· Introduce el digito final: ");
-		digito = Integer.parseInt(scanner.nextLine());
-
+		System.out.println("· Introduce el digito final (0-9): ");
+		
+		String sc = scanner.next();
+		digito = Integer.parseInt(sc);
+		
+		switch(digito) {
+		case 0:
+		case 1:
+		case 2:
+		case 3:
+		case 4:
+		case 5:
+		case 6:
+		case 7:
+		case 8:
+		case 9:
+			System.out.println("Digito introducido correctamente");
+			break;
+		default:
+			System.out.println("Digito incorrecto. Valor comprendido entre 0 y 9");
+			break;
+		}
 		return digito;
 	}
 
-	// 5 TODO: Rellena segundo array
-	private void rellenaArray2(int digitoFinal, int[] numArray) {
-
-		int ultimoDigito;
-		int nuevoArray[];
-		
-		for (int i = 0; i < numArray.length; i++) {
-			ultimoDigito = numArray[i] % 10;
-			if (digitoFinal == ultimoDigito) {
-				nuevoArray[i]=numArray[i];
-			}
-			System.out.print(" " + numArray[i]);
-		}
-	}
+	/*
+	 * // 5 TODO: Rellena segundo array private void rellenaArray2(int digitoFinal,
+	 * int[] numArray) {
+	 * 
+	 * int ultimoDigito; int nuevoArray[];
+	 * 
+	 * for (int i = 0; i < numArray.length; i++) { ultimoDigito = numArray[i] % 10;
+	 * if (digitoFinal == ultimoDigito) { nuevoArray[i]=numArray[i]; }
+	 * System.out.print(" " + numArray[i]); } }
+	 */
 }

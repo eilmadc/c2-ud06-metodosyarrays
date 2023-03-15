@@ -66,7 +66,7 @@ public class Ejercicio11 {
 		for (int i = 0; i < numArray.length; i++) {
 			System.out.print(" " + numArray[i]);
 		}
-		
+		System.out.println("\n");
 	}
 
 }
