@@ -66,7 +66,7 @@ public class Ejercicio12 {
 		return digito;
 	}
 
-	// 5 Rellena segundo array
+	// 5 TODO: Rellena segundo array
 	private void rellenaArray2(int digitoFinal, int[] numArray) {
 
 		int ultimoDigito;
