@@ -17,14 +17,16 @@ public class Utils {
 	}
 
 	// Pedir String por dialog
+	@SuppressWarnings("finally")
 	public String pideString(String mensaje, String titulo) {
 		String string = "";
 		try {
 			string = JOptionPane.showInputDialog(null, mensaje, titulo, JOptionPane.QUESTION_MESSAGE);
 		} catch (Exception e) {
 			System.out.println("No has introducido valor");
-		}
+		}finally {
 		return string;
+		}
 	}
 
 	// Pedir Integer por dialog

@@ -1,10 +1,15 @@
 import clases.Ejercicio1;
+import clases.Ejercicio10;
+import clases.Ejercicio11;
 //import clases.Ejercicio2;
 import clases.Ejercicio2;
 import clases.Ejercicio3;
 import clases.Ejercicio4;
 import clases.Ejercicio5;
 import clases.Ejercicio6;
+import clases.Ejercicio7;
+import clases.Ejercicio8;
+import clases.Ejercicio9;
 
 /**
  * C2-UD06-Clase principal
@@ -51,10 +56,36 @@ public class metodosyarrays {
 		Ejercicio5 ejercicio5 = new Ejercicio5();
 		ejercicio5.pideNumero();
 		
-		// C2-T06: Ejercicio 5
+		// C2-T06: Ejercicio 6
 		System.out.println("\n************** Ejercicio 6 *************\n");
 		Ejercicio6 ejercicio6 = new Ejercicio6();
 		ejercicio6.pideNumero();
+		
+		// C2-T06: Ejercicio 7
+		System.out.println("\n************** Ejercicio 7 *************\n");
+		Ejercicio7 ejercicio7 = new Ejercicio7();
+		ejercicio7.convierteMoneda();
+		
+		// C2-T06: Ejercicio 8 - Sin dialog
+		System.out.println("\n************** Ejercicio 8 *************\n");
+		Ejercicio8 ejercicio8 = new Ejercicio8();
+		ejercicio8.pideNumeros();
+		
+		// C2-T06: Ejercicio 9 - Sin dialog
+		System.out.println("\n************** Ejercicio 9 *************\n");
+		Ejercicio9 ejercicio9 = new Ejercicio9();
+		ejercicio9.pideSizeArray();
+		
+		// C2-T06: Ejercicio 10 - Sin dialog
+		System.out.println("\n************** Ejercicio 10 *************\n");
+		Ejercicio10 ejercicio10 = new Ejercicio10();
+		ejercicio10.pideSizeArray();
+		
+		// C2-T06: Ejercicio 11 - Sin dialog
+		System.out.println("\n************** Ejercicio 10 *************\n");
+		Ejercicio11 ejercicio11 = new Ejercicio11();
+		ejercicio11.iniciaArray();
 	}
 
+	
 }
