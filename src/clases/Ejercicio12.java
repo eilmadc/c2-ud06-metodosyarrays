@@ -27,8 +27,6 @@ public class Ejercicio12 {
 		}else {
 			System.out.println("\nNo hay coincidencias");
 		}
-		
-		
 	}
 
 	// 2 Pide tamaño de los array
