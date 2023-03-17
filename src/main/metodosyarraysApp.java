@@ -1,3 +1,4 @@
+package main;
 import clases.Ejercicio1;
 import clases.Ejercicio10;
 import clases.Ejercicio11;

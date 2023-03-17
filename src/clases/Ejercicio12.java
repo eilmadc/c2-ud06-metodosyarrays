@@ -3,7 +3,6 @@
  */
 package clases;
 
-import java.util.Random;
 import java.util.Scanner;
 
 /**

@@ -3,7 +3,7 @@
  */
 package clases;
 
-import java.util.Random;
+
 import java.util.Scanner;
 
 /**
@@ -26,7 +26,6 @@ public class Ejercicio10 {
 		System.out.println("· Introduce mínimo de valores deseados en el array: ");
 		int min = scanner.nextInt();
 
-		int rango = 10; // entre 0 y 9
 		rellenaArray(size, max, min);
 	}
 
@@ -34,7 +33,6 @@ public class Ejercicio10 {
 	private void rellenaArray(int size, int max, int min) {
 
 		num = new int[size];
-		Random random = new Random();
 
 		for (int i = 0; i < num.length; i++) {
 			int aux = 0;
