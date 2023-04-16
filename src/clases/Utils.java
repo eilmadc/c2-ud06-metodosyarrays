@@ -55,5 +55,11 @@ public class Utils {
 			return num;
 		}
 	}
+	
+	//Devuelve double o float por pantalla con 2 posiciones.
+	public String dosPos(double numero) {
+		String x = String.format("%.2f", numero);
+		return x;
+	}
 
 }
